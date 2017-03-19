@@ -50,7 +50,7 @@ $botsay = $botReply->botsay;
 $token = "EAAUw3e7h6TMBAJZCWV7WRZB8cZCwmNNfDy2iMLuIDj6E3jDkCsds3OPScZArZCM0GcNALCkPKf067ZAHrrfjMZAvSAbtKRJC2MpSMl4jIgwRZBklbpPOWglMyN7gLi2afaFhifNCMQeG73cNY5dxsnRMp3fFOEaBzJQZD";
 
 $data = array(
-'recipient' => array('id'=> $rid),
+'recipient' => array('id'=> $sid),
 'message' => array('text'=>$botsay)
 );
 
