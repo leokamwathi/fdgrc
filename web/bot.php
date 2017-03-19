@@ -36,9 +36,11 @@ $options = array(
 
 );
 $context = stream_context_create($options);
+$path = "http://api.program-o.com/v2/chatbot/?bot_id=6&say=$message&convo_id=$botname&format=json";
 
+$botReply = file_get_contents($path, false, $context);
 
-$botReply = file_get_contents("http://api.program-o.com/v2/chatbot/?bot_id=6&say=$message&convo_id=$botname&format=json", false, $context);
+file_put_contents("php://stderr", $path.$botReply.PHP_EOL);
 
 //{"convo_id":"fbbot-145896237","usersay":"WHAT DO YOU EAT","botsay":"Program-O eats fairy cakes."}
 $botReply = json_decode($botReply);
