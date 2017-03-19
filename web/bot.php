@@ -45,7 +45,7 @@ $botReply = json_decode($botReply);
 $botsay = $botReply->botsay;
 
 
-$token = "EAAN5JK8Gx7sBAGCZB5YulfJl4eoUCXGZABOm1oGRFH4kHubnxeANv8ZCVRQymrxqm0BEpzdULKWKhaBi5qXSbxZBrWhKud2U3ZAsBi1e8y3xCuKUMz9UF5XWRM8O9moGoIidAsUyCr3FLKjlXd0Q2WC70x6vmIZBwajPKXbxKU7AZDZD";
+$token = "EAAUw3e7h6TMBAJZCWV7WRZB8cZCwmNNfDy2iMLuIDj6E3jDkCsds3OPScZArZCM0GcNALCkPKf067ZAHrrfjMZAvSAbtKRJC2MpSMl4jIgwRZBklbpPOWglMyN7gLi2afaFhifNCMQeG73cNY5dxsnRMp3fFOEaBzJQZD";
 
 $data = array(
 'recipient' => array('id'=> $rid),
