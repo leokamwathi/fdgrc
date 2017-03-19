@@ -3,8 +3,12 @@
 //print_r($_GET["hub_challenge"]);
 //file_put_contents("fb.txt",file_get_contents("php://input"));
 try {
-if ($_GET["hub_challenge"]){
-print_r($_GET["hub_challenge"]);
+
+$hubChallenge = $_GET["hub_challenge"];
+if (isset($hubChallenge) && $hubChallenge != '') {
+
+print_r($hubChallenge);
+
 }else{
 
 $fb = file_get_contents("php://input");
