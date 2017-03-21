@@ -7,7 +7,7 @@ Bot: Hi user, What are you looking for?
 
 ***Looking for a job tree*****
 --------------------------------------
-Bot: Please enter the city,country if where you are looking for a job in? 
+Bot: Please enter the city,country of where you are looking for a job in? 
 eg (Nairobi, Kenya) 
 [Submit Locations Using Fb][Manual submission]
 ---------------------------------------
@@ -26,7 +26,7 @@ Eg. Self taught,certificate,diploma,Degree,Masters
 
 ---------------------------------------
 ///////////////////Is this really needed???////////////////////////
- Bot: Please enter a small introduction to yourself.(500 characters)
+ Bot: Please enter a small introduction about yourself.(500 characters)
  eg. Hi My name is Alex, I am very passionate about technology and computers.
  I am very goal focused and will be very happy to work for internet bandwidth. 
  -------------------------------------
@@ -34,12 +34,11 @@ Eg. Self taught,certificate,diploma,Degree,Masters
  Job: Accountant
  Experience: More than 8 years
  Qualification: Masters Degree
- location: Nairobi, Kenya
+ Looking for a job it: Nairobi, Kenya
  About me: I am a very cool accountant. Really I am.
  
  
  [Edit][OK Search for me]
- 
  -------------------------------------
  Bot: Your job search account will be active for 30days. 
  You will be sent a message as to when you reactivate your account.
@@ -56,63 +55,36 @@ Eg. Self taught,certificate,diploma,Degree,Masters
  
  ------------------------------------
  Bot: Where are you located. (city,country)
- [Submit ussing facebook]
+ [Submit using facebook]
  ------------------------------------
  Bot: What job are you listing for. 
  eg accountant, web Designer, Banker etc.
 -------------------------------------
 Bot: What is the minimun job qualification you are looking for.
   [Any][Self Taught][Certificate][Collage Diploma][University Degree][Masters Degree]
--------------------------------------
+------------------------------------
+Bot: What is the minimum job applicant experience you are looking for.
+[Any][Over 1 year][Over 4 years][over 8 years]
+------------------------------------
 Bot: Please describe the job in 1000 characters.
 -We are an NGO looking for a hard working sales person.
--------------------------------------
+------------------------------------
 Bot: Thank you for the information. You have entered. 
 Name: NGO Force
-location: Kisumu, Kenya
+Job location: Kisumu, Kenya
 job: Sales Person
 Qualifications: University Degree
-Experience: 4-5 years
--------------------------------------
-Bot: Got to found job canidates 
-----------------------------------------  
-
- 
- 
-
-
-
-
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
-
-
-
-
-
-
+Experience: Over 1 years
+------------------------------------
+Bot: Got to found job applicants 
+------------------------------------ 
 
 
 ==========================
 Job Found
 ==========================
 -Hi user, A new job listing matching your criteria (Accountant) has been found.
-[Show me the Job][Not Interested Now][Edit Profile][Deactivate My Search]
+[Show me the Job][Not Interested Now][Edit Profile][Deactivate Account]
 
 
 =========================
@@ -120,11 +92,6 @@ Job listing canidates found (May be not)
 =========================
 -Hi Company Name, We have found 8 canidate that fit your job description. Can we notify them of the job listing.
 [Yes Please][No Thank you][Edit Profile][Deactivate the Job Listing]
-
-
-
-
-
 
 
 
