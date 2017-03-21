@@ -44,7 +44,7 @@ file_put_contents("php://stderr", $path.$botReply.PHP_EOL);
 
 //{"convo_id":"fbbot-145896237","usersay":"WHAT DO YOU EAT","botsay":"Program-O eats fairy cakes."}
 $botReply = json_decode($botReply);
-$botsay = $botReply->botsay;
+$botsay = "LIVEBOT: ".$botReply->botsay;
 
 
 $token = "EAAUw3e7h6TMBAJZCWV7WRZB8cZCwmNNfDy2iMLuIDj6E3jDkCsds3OPScZArZCM0GcNALCkPKf067ZAHrrfjMZAvSAbtKRJC2MpSMl4jIgwRZBklbpPOWglMyN7gLi2afaFhifNCMQeG73cNY5dxsnRMp3fFOEaBzJQZD";
