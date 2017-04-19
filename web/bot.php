@@ -20,12 +20,10 @@ $rid = $fb->entry[0]->id;
 $sid = $fb->entry[0]->messaging[0]->sender->id;
 $message = $fb->entry[0]->messaging[0]->message->text;
 
-$botname = "livebot-".$sid;
+$convo_id = $sid;
 //http://api.program-o.com/v2/chatbot/?bot_id=6&say=what%20do%20you%20eat&convo_id=fbbot-145896237&format=json
 //if ($message > 0){
 if (isset($message) && $message != '') {
-
-
 
 $options = array(
 'http' => array(
@@ -43,8 +41,10 @@ $options = array(
 15	Elizaibeth	Talk to me!
 */
 
+$GLOBALS['bot']   = $_ENV["talk_bot"];
+
 $context = stream_context_create($options);
-$path = "http://api.program-o.com/v2/chatbot/?bot_id=12&say=$message&convo_id=$botname&format=json";
+$path = "http://api.program-o.com/v2/chatbot/?bot_id=".$GLOBALS['bot']."&say=$message&convo_id=$convo_id&format=json";
 
 $botReply = file_get_contents($path, false, $context);
 
@@ -53,7 +53,7 @@ file_put_contents("php://stderr", $path.$botReply.PHP_EOL);
 //{"convo_id":"fbbot-145896237","usersay":"WHAT DO YOU EAT","botsay":"Program-O eats fairy cakes."}
 $botReply = json_decode($botReply);
 $botsay = $botReply->botsay;
-$GLOBALS['token']   = $_ENV["talk2bot_fb_token"];
+$GLOBALS['token'] = $_ENV["talk2bot_fb_token"];
 
 //$token = "";
 
