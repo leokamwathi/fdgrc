@@ -19,12 +19,15 @@ $fb = json_decode($fb);
 $rid = $fb->entry[0]->id;
 $sid = $fb->entry[0]->messaging[0]->sender->id;
 $message = $fb->entry[0]->messaging[0]->message->text;
+$payload =  $fb->entry[0]->messaging[0]->postback->payload;
 
 $convo_id = $sid;
 //http://api.program-o.com/v2/chatbot/?bot_id=6&say=what%20do%20you%20eat&convo_id=fbbot-145896237&format=json
 //if ($message > 0){
 if (isset($message) && $message != '') {
-
+    if (isset($payload) && $payload != '') {
+        //do nothing really
+    }else{
 $options = array(
 'http' => array(
 'method' => 'POST',
@@ -74,6 +77,7 @@ $context = stream_context_create($options);
 
 
 $reply = file_get_contents("https://graph.facebook.com/v2.6/me/messages?access_token=".$GLOBALS['token'], false, $context);
+}
 }
 }
 } catch (Exception $e) {
