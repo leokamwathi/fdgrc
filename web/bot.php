@@ -35,8 +35,16 @@ $options = array(
 )
 
 );
+
+/*
+6	Program O	The original chatbot
+10	ShakespeareBot	Talk to William Shakespeare!
+12	Chatmundo	Talk to the twitterbot!
+15	Elizaibeth	Talk to me!
+*/
+
 $context = stream_context_create($options);
-$path = "http://api.program-o.com/v2/chatbot/?bot_id=6&say=$message&convo_id=$botname&format=json";
+$path = "http://api.program-o.com/v2/chatbot/?bot_id=12&say=$message&convo_id=$botname&format=json";
 
 $botReply = file_get_contents($path, false, $context);
 
@@ -44,10 +52,10 @@ file_put_contents("php://stderr", $path.$botReply.PHP_EOL);
 
 //{"convo_id":"fbbot-145896237","usersay":"WHAT DO YOU EAT","botsay":"Program-O eats fairy cakes."}
 $botReply = json_decode($botReply);
-$botsay = "LIVEBOT: ".$botReply->botsay;
+$botsay = $botReply->botsay;
+$GLOBALS['token']   = $_ENV["talk2bot_fb_token"];
 
-
-$token = "EAAUw3e7h6TMBAJZCWV7WRZB8cZCwmNNfDy2iMLuIDj6E3jDkCsds3OPScZArZCM0GcNALCkPKf067ZAHrrfjMZAvSAbtKRJC2MpSMl4jIgwRZBklbpPOWglMyN7gLi2afaFhifNCMQeG73cNY5dxsnRMp3fFOEaBzJQZD";
+//$token = "";
 
 $data = array(
 'recipient' => array('id'=> $sid),
@@ -65,7 +73,7 @@ $options = array(
 $context = stream_context_create($options);
 
 
-$reply = file_get_contents("https://graph.facebook.com/v2.6/me/messages?access_token=$token", false, $context);
+$reply = file_get_contents("https://graph.facebook.com/v2.6/me/messages?access_token=".$GLOBALS['token'], false, $context);
 }
 }
 } catch (Exception $e) {
